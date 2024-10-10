@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Clock with Country Time</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Include Select2 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    <style>
+        /* Add custom colors to the dropdown options */
+        .select2-container--default .select2-results__option[role=group] {
+            background-color: #e3f2fd; /* Light blue for continent group background */
+            font-weight: bold;
+            color: #0d47a1; /* Dark blue for continent label */
+        }
+        .select2-container--default .select2-results__option[role=option] {
+            color: #424242; /* Default text color for options */
+        }
+        /* Specific colors for each group */
+        .america-group .select2-results__option {
+            background-color: #ffebee; /* Light red */
+        }
+        .europe-group .select2-results__option {
+            background-color: #f1f8e9; /* Light green */
+        }
+        .asia-group .select2-results__option {
+            background-color: #fff3e0; /* Light orange */
+        }
+        .australia-group .select2-results__option {
+            background-color: #e8f5e9; /* Light green */
+        }
+        .africa-group .select2-results__option {
+            background-color: #fce4ec; /* Light pink */
+        }
+
+        /* Set colors for the selected option */
+        .select2-container--default .select2-selection--single {
+            background-color: #f3e5f5;
+            color: #6a1b9a;
+        }
+
+        /* Set colors for the dropdown */
+        .select2-dropdown {
+            border: 1px solid #6a1b9a; /* Purple border for dropdown */
+        }
+    </style>
+</head>
+<body>
+
+<div id="clock">
+    <div id="greeting"></div>
+    <div id="time">
+        <span id="hour"></span>:<span id="minutes"></span>:<span id="seconds"></span> <span id="period"></span>
+    </div>
+    <div id="date">
+        <span id="dayname"></span>, <span id="month"></span> <span id="daynum"></span>, <span id="year"></span>
+    </div>
+</div>
+
+<!-- Searchable dropdown for selecting country/timezone -->
+<div style="text-align: center; margin-top: 20px;">
+    <label for="timezone">Select Country/Timezone:</label>
+    <select id="timezone" style="width: 300px;">
+        <optgroup label="America" class="america-group">
+            <option value="America/New_York">🇺🇸 USA (New York)</option>
+            <option value="America/Los_Angeles">🇺🇸 USA (Los Angeles)</option>
+            <option value="America/Toronto">🇨🇦 Canada (Toronto)</option>
+            <option value="America/Sao_Paulo">🇧🇷 Brazil (São Paulo)</option>
+        </optgroup>
+        <optgroup label="Europe" class="europe-group">
+            <option value="Europe/London">🇬🇧 UK (London)</option>
+            <option value="Europe/Paris">🇫🇷 France (Paris)</option>
+            <option value="Europe/Berlin">🇩🇪 Germany (Berlin)</option>
+        </optgroup>
+        <optgroup label="Asia" class="asia-group">
+            <option value="Asia/Tokyo">🇯🇵 Japan (Tokyo)</option>
+            <option value="Asia/Shanghai">🇨🇳 China (Shanghai)</option>
+            <option value="Asia/Dubai">🇦🇪 UAE (Dubai)</option>
+            <option value="Asia/Kolkata">🇮🇳 India (Kolkata)</option> <!-- Indian Standard Time -->
+        </optgroup>
+        <optgroup label="Australia" class="australia-group">
+            <option value="Australia/Sydney">🇦🇺 Australia (Sydney)</option>
+        </optgroup>
+        <optgroup label="Africa" class="africa-group">
+            <option value="Africa/Cairo">🇪🇬 Egypt (Cairo)</option>
+            <option value="Africa/Johannesburg">🇿🇦 South Africa (Johannesburg)</option>
+        </optgroup>
+    </select>
+</div>
+
+<script src="script.js"></script>
+<!-- Include Select2 JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+<script>
+    // Initialize Select2 on the dropdown with placeholder and colors
+    $('#timezone').select2({
+        placeholder: 'Select a country/timezone',
+        allowClear: true
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+/* Styling the clock display area */
+#clock {
+    background: linear-gradient(to right, #4b6cb7, #182848);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+    width: 300px;
+}
+
+#greeting {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#time {
+    font-size: 3.2em;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+#date {
+    font-size: 1.4em;
+    font-weight: 400;
+}
+
+/* Dropdown styling */
+label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Customize the dropdown (Select2) */
+.select2-container--default .select2-selection--single {
+    background-color: #f3e5f5; /* Light purple background */
+    border: 2px solid #6a1b9a; /* Dark purple border */
+    border-radius: 8px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    font-family: 'Roboto', sans-serif;
+    color: #6a1b9a; /* Purple text */
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+/* Dropdown hover effect */
+.select2-container--default .select2-selection--single:hover {
+    background-color: #e1bee7; /* Light purple on hover */
+    border-color: #4a148c; /* Darker purple border on hover */
+}
+
+.select2-container--default .select2-results__option {
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+}
+
+/* Colorful dropdown groupings */
+.select2-container--default .select2-results__option[role=group] {
+    background-color: #e3f2fd; /* Light blue background for group */
+    color: #0d47a1; /* Dark blue text for group */
+    font-weight: 700;
+}
+
+.america-group .select2-results__option {
+    background-color: #ffebee; /* Light red */
+}
+
+.europe-group .select2-results__option {
+    background-color: #f1f8e9; /* Light green */
+}
+
+.asia-group .select2-results__option {
+    background-color: #fff3e0; /* Light orange */
+}
+
+.australia-group .select2-results__option {
+    background-color: #e8f5e9; /* Light green */
+}
+
+.africa-group .select2-results__option {
+    background-color: #fce4ec; /* Light pink */
+}
+
+/* Dropdown selected state */
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #6a1b9a; /* Text color in dropdown when selected */
+    padding-left: 0;
+}
+
+/* Placeholder text */
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: #9e9e9e; /* Gray color for placeholder */
+    font-weight: 400;
+}
+
+/* Dropdown border styling */
+.select2-dropdown {
+    border: 2px solid #6a1b9a; /* Purple border */
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling the button */
+button {
+    background-color: #6a1b9a;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect on button */
+button:hover {
+    background-color: #4a148c;
+}
+
+/* General body styling */
+body {
+    background-color: #f4f4f9;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
